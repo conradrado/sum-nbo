@@ -23,10 +23,9 @@ int main(int argc, char *argv[]){
 		
 		uint32_t str[8];
 		int size = fread(str, sizeof(uint32_t), 8, fp);
-		if (size < 4){
-			printf("Sorry, your binary file's size is not big enough lmao ! ! ! )");
-			break;
-		}	
+		//if (size < 8){
+			//printf("your file size is not big enough!");
+		//}	
 		uint32_t result = my_ntohl(*str);
 		sum += result;
 		printf("%d(0x%08X) " , result, result);
